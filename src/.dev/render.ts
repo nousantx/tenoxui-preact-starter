@@ -1,5 +1,5 @@
 import { TenoxUI } from 'tenoxui'
-import config from './config'
+import { config } from '../styles'
 
 const ui = new TenoxUI(config)
 
@@ -17,4 +17,3 @@ function render(node: Document | Element): string {
 }
 
 export { render, ui }
-export { default as config } from './config'

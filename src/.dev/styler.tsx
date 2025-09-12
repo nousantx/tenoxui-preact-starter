@@ -1,7 +1,7 @@
 import { useLayoutEffect, useRef } from 'preact/hooks'
 import type { ComponentChildren } from 'preact'
-import { styles as defaultStyles } from './'
-import { render, ui } from '../lib/tenoxui'
+import { styles as defaultStyles } from '../styles'
+import { render, ui } from './render'
 
 const isDev = import.meta.env.DEV
 
