@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef } from 'preact/hooks'
 import type { ComponentChildren } from 'preact'
-import { styles as defaultStyles } from '../styles'
+import defaultStyles from '../styles'
 import { render, ui } from './render'
 
 const isDev = import.meta.env.DEV
