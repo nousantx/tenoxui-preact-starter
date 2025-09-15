@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@tenoxui/plugin-moxie':
+        specifier: 1.0.0-alpha.12
+        version: 1.0.0-alpha.12
       preact:
         specifier: ^10.27.0
         version: 10.27.1
@@ -18,27 +21,12 @@ importers:
       '@preact/preset-vite':
         specifier: ^2.10.2
         version: 2.10.2(@babel/core@7.28.4)(preact@10.27.1)(vite@7.1.5(@types/node@24.3.2))
-      '@tenoxui/core':
-        specifier: 2.0.3
-        version: 2.0.3(@tenoxui/moxie@0.7.1)
-      '@tenoxui/moxie':
-        specifier: ^0.7.1
-        version: 0.7.1
-      '@tenoxui/preset-tailwind':
-        specifier: ^1.0.4
-        version: 1.0.4
       '@types/node':
         specifier: ^24.3.2
         version: 24.3.2
-      nguraijs:
-        specifier: ^0.6.1
-        version: 0.6.1
       rollup:
         specifier: ~4.44.2
         version: 4.44.2
-      tenoxui:
-        specifier: ^1.0.0
-        version: 1.0.0(@tenoxui/core@2.0.3(@tenoxui/moxie@0.7.1))(@tenoxui/moxie@0.7.1)
       typescript:
         specifier: ~5.8.3
         version: 5.8.3
@@ -46,8 +34,8 @@ importers:
         specifier: ^7.1.2
         version: 7.1.5(@types/node@24.3.2)
       vite-plugin-tenoxui-beta:
-        specifier: 0.1.0-alpha.3
-        version: 0.1.0-alpha.3(@tenoxui/core@2.0.3(@tenoxui/moxie@0.7.1))(@tenoxui/moxie@0.7.1)(rollup@4.44.2)
+        specifier: 0.1.0-alpha.5
+        version: 0.1.0-alpha.5(@tenoxui/moxie@0.7.1)(rollup@4.44.2)
 
 packages:
 
@@ -316,6 +304,9 @@ packages:
   '@jridgewell/trace-mapping@0.3.30':
     resolution: {integrity: sha512-GQ7Nw5G2lTu/BtHTKfXhKHok2WGetd4XYcVKGx00SjAk8GMwgJM3zr6zORiPGuOE+/vkc90KtTosSSvaCjKb2Q==}
 
+  '@nguraijs/core@0.2.0':
+    resolution: {integrity: sha512-ko544r/34jmMgX63RfgH1qtF7JNkIucVJgETXmcRia4YTH6FFuoqsD1c4+cRuRqdYJgoO1EudxQSUZd/qZ8Cmw==}
+
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -467,16 +458,19 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@tenoxui/core@2.0.3':
-    resolution: {integrity: sha512-PCkpB0h7XUkZIUZRYtLFWhFS421N8zLepHCdHVj4+y80/0s1NNxXL+Wqq/f3BKRMXzbm8+25kGXwbIc81auECw==}
+  '@tenoxui/core@3.0.0-alpha.5':
+    resolution: {integrity: sha512-LI107g8i5POOzlAbU+PhEgse6WuIFoaLdptbYE2DWBJeDEKUGSRX5nBJaYgReE1awNgXvPvx5RuDDoaTQ3xyYg==}
     peerDependencies:
       '@tenoxui/moxie': '>=0.7.0'
 
   '@tenoxui/moxie@0.7.1':
     resolution: {integrity: sha512-lP/1ZnX3W6x9CIFAelvbLdUyjZ+E5jdqr3CgstBf6O4s+oKHSzpuyCK1AtiBroz48D6/SYgzSr6rAgB9dF3MTA==}
 
-  '@tenoxui/preset-tailwind@1.0.4':
-    resolution: {integrity: sha512-RiCUGRfDD0YwGXRt7DxMT01RxOdcX3SkQ+b5acK0ronetmBxQ9z76I6oQnXDpzWiprXEXy+OlTMBgzyg9zURVA==}
+  '@tenoxui/plugin-moxie@1.0.0-alpha.11':
+    resolution: {integrity: sha512-ZH1SbO2+v8iTtTkgBPdJJ+KWK/PD7QNNDKEty9P9bzeUbLoYPkcFlYg2bVpo3vi8t1V/Bd7Wf6DR4y56QceFpQ==}
+
+  '@tenoxui/plugin-moxie@1.0.0-alpha.12':
+    resolution: {integrity: sha512-7aC0S8Hu1xceDk5V1OT/NCyIU5Yk+SOb2h/Y4+CDPX5oVodNCmWrlmI2qB7dwHPLOg6xzOFlOKYBzIbz/vS2vA==}
 
   '@tenoxui/types@0.1.2':
     resolution: {integrity: sha512-Vvmcj5qN9qqEnGjBx3S3fQD3yty2RdMG2qtssQywBdEbX9ast1nuHCe60ML4q3+40Dfz2LMRh4Ny7vzGta5xPA==}
@@ -645,9 +639,6 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
-  nguraijs@0.6.1:
-    resolution: {integrity: sha512-KlY61qhWN3pol3BJnKlrsM4edLvMrVZkapTFNn8/ZIT0/vDeXDg8N9Q1J5vU0dsbOJ8Mq8PHYhfAtT5PtuqBLA==}
-
   node-html-parser@6.1.13:
     resolution: {integrity: sha512-qIsTMOY4C/dAa5Q5vsobRpOOvPfC4pB61UVW2uSwZNUp0QU/jCekTal1vMmbO0DgdHeLUJpv/ARmDqErVxA3Sg==}
 
@@ -709,12 +700,6 @@ packages:
     resolution: {integrity: sha512-2ztBJRek8IVofG9DBJqdy2N5kulaacX30Nz7xmkYF6ale9WBVmIy6mFBchvGX7Vx/MyjBhx+Rcxqrj+dbOnQ6A==}
     engines: {node: '>=16'}
 
-  tenoxui@1.0.0:
-    resolution: {integrity: sha512-cwfsiDOlGBCt6ZA2mRdw54cnSoTQOM1aphTLv4W0mPnUZ1Ove8pOFhyIl/j15hq99gRzSBlu+HsyF2IL3VWq7A==}
-    peerDependencies:
-      '@tenoxui/core': '>=2.0.0'
-      '@tenoxui/moxie': '>=0.7.0'
-
   tinyglobby@0.2.15:
     resolution: {integrity: sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==}
     engines: {node: '>=12.0.0'}
@@ -737,8 +722,8 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
 
-  vite-plugin-tenoxui-beta@0.1.0-alpha.3:
-    resolution: {integrity: sha512-GWUjYzxZtzWOCwm+tR6Ne3REdLriVIk+T3awpoMIyoOszZIpsOFICjRiEtzD1+Khn/NCiOig+ha0wVlDtaVNrw==}
+  vite-plugin-tenoxui-beta@0.1.0-alpha.5:
+    resolution: {integrity: sha512-YmWneM6EqHU5AawbuQ4wFZju9eX8Ye6R+iF6Kdzgb47V2YCOOBvsDS4nEUr+K52k7l+e/sB+J/m2eIhsXTIJwA==}
 
   vite-prerender-plugin@0.5.12:
     resolution: {integrity: sha512-EiwhbMn+flg14EysbLTmZSzq8NGTxhytgK3bf4aGRF1evWLGwZiHiUJ1KZDvbxgKbMf2pG6fJWGEa3UZXOnR1g==}
@@ -1016,6 +1001,8 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
+  '@nguraijs/core@0.2.0': {}
+
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -1141,7 +1128,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.44.2':
     optional: true
 
-  '@tenoxui/core@2.0.3(@tenoxui/moxie@0.7.1)':
+  '@tenoxui/core@3.0.0-alpha.5(@tenoxui/moxie@0.7.1)':
     dependencies:
       '@tenoxui/moxie': 0.7.1
       '@tenoxui/types': 0.1.2
@@ -1150,9 +1137,9 @@ snapshots:
     dependencies:
       '@tenoxui/types': 0.1.2
 
-  '@tenoxui/preset-tailwind@1.0.4':
-    dependencies:
-      '@tenoxui/types': 0.1.2
+  '@tenoxui/plugin-moxie@1.0.0-alpha.11': {}
+
+  '@tenoxui/plugin-moxie@1.0.0-alpha.12': {}
 
   '@tenoxui/types@0.1.2': {}
 
@@ -1318,8 +1305,6 @@ snapshots:
 
   nanoid@3.3.11: {}
 
-  nguraijs@0.6.1: {}
-
   node-html-parser@6.1.13:
     dependencies:
       css-select: 5.2.2
@@ -1391,12 +1376,6 @@ snapshots:
 
   stack-trace@1.0.0-pre2: {}
 
-  tenoxui@1.0.0(@tenoxui/core@2.0.3(@tenoxui/moxie@0.7.1))(@tenoxui/moxie@0.7.1):
-    dependencies:
-      '@tenoxui/core': 2.0.3(@tenoxui/moxie@0.7.1)
-      '@tenoxui/moxie': 0.7.1
-      '@tenoxui/types': 0.1.2
-
   tinyglobby@0.2.15:
     dependencies:
       fdir: 6.5.0(picomatch@4.0.3)
@@ -1416,13 +1395,14 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  vite-plugin-tenoxui-beta@0.1.0-alpha.3(@tenoxui/core@2.0.3(@tenoxui/moxie@0.7.1))(@tenoxui/moxie@0.7.1)(rollup@4.44.2):
+  vite-plugin-tenoxui-beta@0.1.0-alpha.5(@tenoxui/moxie@0.7.1)(rollup@4.44.2):
     dependencies:
+      '@nguraijs/core': 0.2.0
       '@rollup/pluginutils': 5.3.0(rollup@4.44.2)
+      '@tenoxui/core': 3.0.0-alpha.5(@tenoxui/moxie@0.7.1)
+      '@tenoxui/plugin-moxie': 1.0.0-alpha.11
       fast-glob: 3.3.3
-      tenoxui: 1.0.0(@tenoxui/core@2.0.3(@tenoxui/moxie@0.7.1))(@tenoxui/moxie@0.7.1)
     transitivePeerDependencies:
-      - '@tenoxui/core'
       - '@tenoxui/moxie'
       - rollup
 

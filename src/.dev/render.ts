@@ -1,7 +1,11 @@
-import { TenoxUI } from 'tenoxui'
-import { config } from '../styles/config'
+import config from '../../tenoxui.config.js'
+import { Renderer, createTenoxUI } from '@tenoxui/plugin-moxie'
 
-export const ui = new TenoxUI(config)
+export const ui = new Renderer({
+  main: createTenoxUI(config.css),
+  apply: config.css.apply,
+  aliases: config.css.aliases
+})
 
 export function render(node: Document | Element): string {
   const elements = node.querySelectorAll('*')

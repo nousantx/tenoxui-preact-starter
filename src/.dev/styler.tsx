@@ -1,6 +1,5 @@
 import { useLayoutEffect, useRef } from 'preact/hooks'
 import type { ComponentChildren } from 'preact'
-import defaultStyles from '../styles'
 import { render, ui } from './render'
 
 const isDev = import.meta.env.DEV
@@ -14,7 +13,7 @@ export function styler({ children }: { children: ComponentChildren }) {
   const updateStyles = () => {
     if (!appRef.current || !styleTagRef.current || !render) return
     try {
-      const newCSS = ui.render(defaultStyles) + render(appRef.current)
+      const newCSS = render(appRef.current)
       styleTagRef.current.textContent = newCSS
     } catch (error) {
       console.error('Error generating CSS:', error)
