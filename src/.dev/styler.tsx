@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef } from 'preact/hooks'
 import type { ComponentChildren } from 'preact'
 import { render, ui } from './render'
+import styles from '../styles'
 
 const isDev = import.meta.env.DEV
 
@@ -13,7 +14,7 @@ export function styler({ children }: { children: ComponentChildren }) {
   const updateStyles = () => {
     if (!appRef.current || !styleTagRef.current || !render) return
     try {
-      const newCSS = render(appRef.current)
+      const newCSS = ui.render(styles) + render(appRef.current)
       styleTagRef.current.textContent = newCSS
     } catch (error) {
       console.error('Error generating CSS:', error)
@@ -60,7 +61,7 @@ export function styler({ children }: { children: ComponentChildren }) {
       observerRef.current?.disconnect()
       observerRef.current = null
     }
-  }, [])
+  }, [styles])
   return <div ref={appRef}>{children}</div>
 }
 export default styler

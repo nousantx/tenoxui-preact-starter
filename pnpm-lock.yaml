@@ -11,6 +11,9 @@ importers:
       '@tenoxui/plugin-moxie':
         specifier: 1.0.0-alpha.12
         version: 1.0.0-alpha.12
+      cssrxp:
+        specifier: ^0.4.0
+        version: 0.4.0
       preact:
         specifier: ^10.27.0
         version: 10.27.1
@@ -34,8 +37,8 @@ importers:
         specifier: ^7.1.2
         version: 7.1.5(@types/node@24.3.2)
       vite-plugin-tenoxui-beta:
-        specifier: 0.1.0-alpha.5
-        version: 0.1.0-alpha.5(@tenoxui/moxie@0.7.1)(rollup@4.44.2)
+        specifier: 0.1.0-alpha.6
+        version: 0.1.0-alpha.6(@tenoxui/moxie@0.7.1)(rollup@4.44.2)
 
 packages:
 
@@ -466,9 +469,6 @@ packages:
   '@tenoxui/moxie@0.7.1':
     resolution: {integrity: sha512-lP/1ZnX3W6x9CIFAelvbLdUyjZ+E5jdqr3CgstBf6O4s+oKHSzpuyCK1AtiBroz48D6/SYgzSr6rAgB9dF3MTA==}
 
-  '@tenoxui/plugin-moxie@1.0.0-alpha.11':
-    resolution: {integrity: sha512-ZH1SbO2+v8iTtTkgBPdJJ+KWK/PD7QNNDKEty9P9bzeUbLoYPkcFlYg2bVpo3vi8t1V/Bd7Wf6DR4y56QceFpQ==}
-
   '@tenoxui/plugin-moxie@1.0.0-alpha.12':
     resolution: {integrity: sha512-7aC0S8Hu1xceDk5V1OT/NCyIU5Yk+SOb2h/Y4+CDPX5oVodNCmWrlmI2qB7dwHPLOg6xzOFlOKYBzIbz/vS2vA==}
 
@@ -510,6 +510,9 @@ packages:
   css-what@6.2.2:
     resolution: {integrity: sha512-u/O3vwbptzhMs3L1fQE82ZSLHQQfto5gyZzwteVIEyeaY5Fc7R4dapF/BvRoSYFeqfBk4m0V1Vafq5Pjv25wvA==}
     engines: {node: '>= 6'}
+
+  cssrxp@0.4.0:
+    resolution: {integrity: sha512-b2pb8iMznzORA25MYB1N0HUCS0ejF+e4bnTOgjXMWgRH/kTqHiwT6CGLjAEdFbQ3sxKvu2EXxW5hDtNXjV+knA==}
 
   debug@4.4.1:
     resolution: {integrity: sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==}
@@ -722,8 +725,8 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
 
-  vite-plugin-tenoxui-beta@0.1.0-alpha.5:
-    resolution: {integrity: sha512-YmWneM6EqHU5AawbuQ4wFZju9eX8Ye6R+iF6Kdzgb47V2YCOOBvsDS4nEUr+K52k7l+e/sB+J/m2eIhsXTIJwA==}
+  vite-plugin-tenoxui-beta@0.1.0-alpha.6:
+    resolution: {integrity: sha512-C8uOOXoB9gMIvnyGOFwweTNowYeMT+pACiAZMUSl+SSdSZo6i6O3AE6p+zY6iSThRz7Il15BD+xPzhS00KsWRA==}
 
   vite-prerender-plugin@0.5.12:
     resolution: {integrity: sha512-EiwhbMn+flg14EysbLTmZSzq8NGTxhytgK3bf4aGRF1evWLGwZiHiUJ1KZDvbxgKbMf2pG6fJWGEa3UZXOnR1g==}
@@ -1137,8 +1140,6 @@ snapshots:
     dependencies:
       '@tenoxui/types': 0.1.2
 
-  '@tenoxui/plugin-moxie@1.0.0-alpha.11': {}
-
   '@tenoxui/plugin-moxie@1.0.0-alpha.12': {}
 
   '@tenoxui/types@0.1.2': {}
@@ -1179,6 +1180,8 @@ snapshots:
       nth-check: 2.1.1
 
   css-what@6.2.2: {}
+
+  cssrxp@0.4.0: {}
 
   debug@4.4.1:
     dependencies:
@@ -1395,12 +1398,13 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  vite-plugin-tenoxui-beta@0.1.0-alpha.5(@tenoxui/moxie@0.7.1)(rollup@4.44.2):
+  vite-plugin-tenoxui-beta@0.1.0-alpha.6(@tenoxui/moxie@0.7.1)(rollup@4.44.2):
     dependencies:
       '@nguraijs/core': 0.2.0
       '@rollup/pluginutils': 5.3.0(rollup@4.44.2)
       '@tenoxui/core': 3.0.0-alpha.5(@tenoxui/moxie@0.7.1)
-      '@tenoxui/plugin-moxie': 1.0.0-alpha.11
+      '@tenoxui/plugin-moxie': 1.0.0-alpha.12
+      cssrxp: 0.4.0
       fast-glob: 3.3.3
     transitivePeerDependencies:
       - '@tenoxui/moxie'

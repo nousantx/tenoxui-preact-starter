@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tenoxui/plugin-moxie": "1.0.0-alpha.12",
+    "cssrxp": "^0.4.0",
     "preact": "^10.27.0"
   },
   "devDependencies": {
@@ -19,6 +20,6 @@
     "rollup": "~4.44.2",
     "typescript": "~5.8.3",
     "vite": "^7.1.2",
-    "vite-plugin-tenoxui-beta": "0.1.0-alpha.5"
+    "vite-plugin-tenoxui-beta": "0.1.0-alpha.6"
   }
 }

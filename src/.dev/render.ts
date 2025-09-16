@@ -1,10 +1,9 @@
-import config from '../../tenoxui.config.js'
+import config from '../styles/config'
 import { Renderer, createTenoxUI } from '@tenoxui/plugin-moxie'
 
 export const ui = new Renderer({
-  main: createTenoxUI(config.css),
-  apply: config.css.apply,
-  aliases: config.css.aliases
+  main: createTenoxUI(config),
+  aliases: config.aliases
 })
 
 export function render(node: Document | Element): string {
